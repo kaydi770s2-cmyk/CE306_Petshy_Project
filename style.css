@@ -1,0 +1,237 @@
+/* ===== สไตล์พื้นฐาน  =====*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'kanti', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #fff9f5;
+    color: black;
+    line-height: 1.6;
+}
+
+/* ===== แถบเมนูบน =====*/
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: 0 4px 12px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    position: relative;
+}
+
+
+header::after {
+    content: "🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    font-size: 10px;
+    color: #ff7b54;
+    letter-spacing: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff7b54;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: black;
+}
+/* ===== แบนเนอร์ส่วนหัว =====*/
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #ffefe7 0%, #fff3e0 100%);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ff7b54;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+btn-main {
+    display: inline-block;
+    background-color: #ff7b54;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255,123,84,0.3);
+    transition: transfrom 0.2s, background-color 0.2s;
+}
+
+.btn-main:hover {
+    background-color: #e66a45;
+    transform: translateY(-2px);
+}
+
+/* ===== เลย์เอาต์คอนเทนต์หลัก ===== */
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4a3e3d;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff7b54;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ===== การ์ดแสดงน้องๆในร้าน =====*/
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.animal-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transfrom 0.3s, box-shadow 0.3s;
+}
+
+.animal-card:hover {
+    transform: translate(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.animal-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.animal-info {
+    padding: 1.2rem;
+}
+
+.animal-tag {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.animal-tag.resting {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.animal-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #2d3436;
+}
+
+.animal-decs {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 1rem;    
+}
+
+/*===== ฟอร์มการจอง =====*/
+.booking-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 4rem auto 0 auto;
+}
+
+.from-group {
+    margin-bottom: 1.2rem;
+}
+
+.from-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.from-group input:focus, .from-group select:focus {
+    border-color: #ff7b54;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.success-box {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #5b4cc4;
+}
+
+/* ===== ส่วนท้าย =====*/
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #4a3e3d;
+    color: #fff;
+    margin-top: 4rem;
+}

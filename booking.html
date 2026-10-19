@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองคิวในร้าน</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="img/jpg" href="cafe petshy.jpg">
+</head>
+<body>
+    <header>
+        <div class="logo">🐾 Petshy</div>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="pet.html">เหล่าสรรพสัตว์ในร้าน</a>
+            <a href="booking.html">จองคิวในร้าน</a>
+        </nav>
+    </header>
+    <!--แบบฟาร์มจองคิวของร้าน-->
+        <div class="booking-section" id="booking">
+            <h2 class="section-title"จองรอบเข้าชมร้าน></h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="userName">ชื่อ-นามสกุล ผู้จอง:</label>
+                    <input type="text" id="userName" placeholder="เช่น กันตภณ กายดี" required>
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">เบอร์โทรศัพท์:</label>
+                    <input type="tel" id="userPhone" placeholder="09X-XXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookDate">วันที่ต้องการเข้ามาในร้าน:</label>
+                    <input type="date" id="bookDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookTime">รอบเวลา:</label>
+                    <section id="bookTime" requried>
+                        <option value="">--เลือกรอบเวลา--</option>
+                        <input type="text" id="bookTime">
+                        <option value="09:00-12:00">09:00 - 12:00</option>
+                        <option value="13:00-16:00">13:00 - 16:00</option>
+                        <option value="17:00-22:00">17:00 - 22:00</option>
+                    </section>
+                </div>
+
+                <div class="form-group">
+                    <label for="gustCount">จำนวนคนเข้าร้าน:</label>
+                    <input type="number" id="guestCount" min="1" max="50" value="1" required>
+                </div>
+                <button type="submit" class="btn-submit">ยืนยันการจอง</button>
+            </form>
+
+            <div id="successBox" class="success-box">
+                <h1 class="success-icon">🎉</h1>
+                <h2 class="success-title">จองเรียบร้อยแล้ว</h2>
+                <p class="success-desc">ทางร้าน Petshy ได้รับข้อมูลการจองแล้วครับ</p>
+
+                <div class="summary-card">
+                    <p><strong>ชื่อผู้จอง:</strong><span id="resName"></span></p>
+                    <p><strong>เบอร์โทรศัพท์:</strong><span id="resPhone"></span></p>
+                    <p><strong>วันที่:</strong><span id="resDate"></span></p>
+                    <p><strong>รอบเวลา:</strong><span id="resTime"></span></p>
+                    <p><strong>จำนวน:</strong><span id="resGuest"></span></p>
+                </div>
+
+                <button onclick="location.reload()" class="btn-submit btn-secondary">จองคิวเพิ่มอีกรายการ</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3>ติดต่อเราได้ที่</h3>
+        <a href="https://web.facebook.com/pond.kantaphon.2024?locale=th_TH">facebook</a>
+        <br>
+        <a href="#Instagram">instagram</a>
+        <br>
+        <a href="#TikTok">tiktok</a>
+        <br>
+        <p>© 2026 Petshy Project. Web Appliction Coure.</p>
+    </footer>
+    <!--ดึงไฟล์ JS มาใช้(script.js)-->
+    <script src="script.js"></script>
+</body>
+</html>
